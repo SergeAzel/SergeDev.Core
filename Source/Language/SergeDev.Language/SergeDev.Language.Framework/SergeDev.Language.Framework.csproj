@@ -59,6 +59,10 @@
       <Project>{FC3383BE-DC73-4FDE-B6FC-16D0FD8B1376}</Project>
       <Name>SergeDev.Language.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SergeDev.Language\SergeDev.Language.Syntax.csproj">
+      <Project>{98B9EA51-643A-4602-8CDE-14B51C99A349}</Project>
+      <Name>SergeDev.Language.Syntax</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

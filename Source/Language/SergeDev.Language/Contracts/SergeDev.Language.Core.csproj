@@ -47,18 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extension\WrapExtension.cs" />
-    <Compile Include="Implementations\BaseTokenExpressionMap.cs" />
+    <Compile Include="Implementations\BaseReaderMap.cs" />
     <Compile Include="Implementations\EnumerateUntilNull.cs" />
-    <Compile Include="Implementations\TokenExpressionMapCollection.cs" />
-    <Compile Include="Implementations\UnknownToken.cs" />
-    <Compile Include="Implementations\WrappedExpressionGenerator.cs" />
-    <Compile Include="Implementations\WrappedTokenExpressionMap.cs" />
-    <Compile Include="Interfaces\ICharacterTokenMap.cs" />
-    <Compile Include="Interfaces\IReadExpression.cs" />
+    <Compile Include="Implementations\ReaderMapCollection.cs" />
+    <Compile Include="Implementations\WrappedReadPartial.cs" />
+    <Compile Include="Implementations\WrappedReaderMap.cs" />
     <Compile Include="Interfaces\IReadPartial.cs" />
-    <Compile Include="Interfaces\IToken.cs" />
-    <Compile Include="Interfaces\IReadToken.cs" />
-    <Compile Include="Interfaces\ITokenExpressionMap.cs" />
+    <Compile Include="Interfaces\IReaderMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

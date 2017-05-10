@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
-using SergeDev.Language.Contracts.Implementations;
 using SergeDev.Language.Core.Implementations;
 using SergeDev.Contracts.Interfaces;
 using SergeDev.Core;
@@ -18,22 +17,24 @@ namespace SergeDev.Language.Framework
   /// Current structure may not be satisfactory for a global definition.
   /// Restructure and give an interface.
   /// </summary>
-  public class Lexor : EnumerateUntilNull<IToken>
+  /// 
+  /*
+  public class Lexor : EnumerateUntilNull<BaseToken>
   {
     private Context context;
     private IObjectStream<char> source;
-    private List<ICharacterTokenMap> mappings;
+    private List<IReaderMap<char, BaseToken>> mappings;
 
-    public Lexor(Context context, IEnumerator<char> source, IEnumerable<ICharacterTokenMap> tokenMappings)
+    public Lexor(Context context, IEnumerator<char> source, IEnumerable<IReaderMap<char, BaseToken>> tokenMappings)
     {
       this.context = context;
       this.source = new BasicObjectStream<char>(source);
-      this.mappings = new List<ICharacterTokenMap>(tokenMappings);
+      this.mappings = new List<IReaderMap<char, BaseToken>>(tokenMappings);
     }
 
-    protected override IToken MoveNext()
+    protected override BaseToken MoveNext()
     {
-      var current = default(IToken);
+      var current = default(BaseToken);
       if (source.HasObject())
       {
         foreach (var map in mappings)
@@ -56,5 +57,5 @@ namespace SergeDev.Language.Framework
       }
       return current;
     }
-  }
+  }*/
 }

@@ -41,10 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tokens\BaseToken.cs" />
+    <Compile Include="Tokens\OpenBracketToken.cs" />
+    <Compile Include="Tokens\UnknownToken.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tokens\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Contracts\SergeDev.Language.Core.csproj">
       <Project>{FC3383BE-DC73-4FDE-B6FC-16D0FD8B1376}</Project>

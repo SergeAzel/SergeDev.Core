@@ -10,14 +10,14 @@ namespace SergeDev.Language.Core.Extension
 {
   public static class WrapExtension
   {
-    public static IReadExpression<B> Wrap<T, B>(this IReadExpression<T> wrapped) where T : class, B where B : class
+    public static IReaderMap<S, B> Wrap<S, T, B>(this IReaderMap<S, T> wrapped) where T : class, B where B : class
     {
-      return new WrappedReadExpression<T, B>(wrapped);
+      return new WrappedReaderMap<S, T, B>(wrapped);
     }
 
-    public static ITokenExpressionMap<B> Wrap<T, B>(this ITokenExpressionMap<T> wrapped) where T : class, B where B : class
+    public static IReadPartial<S, B> Wrap<S, T, B>(this IReadPartial<S, T> wrapped) where T : class, B where B : class
     {
-      return new WrappedTokenExpressionMap<T, B>(wrapped);
+      return new WrappedReadPartial<S, T, B>(wrapped);
     }
   }
 }

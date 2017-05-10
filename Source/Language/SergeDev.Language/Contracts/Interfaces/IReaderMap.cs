@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SergeDev.Language.Core.Interfaces
 {
-  public interface ITokenExpressionMap<T> : IMap<IToken, IReadExpression<T>>
+  public interface IReaderMap<S, T> : IMap<S, IReadPartial<S, T>>
   {
   }
 }

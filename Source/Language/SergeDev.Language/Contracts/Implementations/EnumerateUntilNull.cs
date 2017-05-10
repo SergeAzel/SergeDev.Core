@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SergeDev.Language.Contracts.Implementations
+namespace SergeDev.Language.Core.Implementations
 {
   public abstract class EnumerateUntilNull<T> : IEnumerator<T>
   {

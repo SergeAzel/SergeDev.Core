@@ -10,8 +10,14 @@ namespace SergeDev.Contracts.Interfaces
   {
     bool HasObject();
 
+    bool HasObject(int depth);
+
     T Peek();
 
+    T Peek(int depth);
+
     T Take();
+
+    IEnumerable<T> Take(int count);
   }
 }

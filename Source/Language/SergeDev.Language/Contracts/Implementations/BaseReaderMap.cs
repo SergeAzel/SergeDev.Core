@@ -9,13 +9,13 @@ using SergeDev.Contracts.Interfaces;
 
 namespace SergeDev.Language.Core.Implementations
 {
-  public abstract class BaseTokenExpressionMap<T> : ITokenExpressionMap<T> where T : class
+  public abstract class BaseReaderMap<S, T> : IReaderMap<S, T> where T : class
   {
-    public abstract IReadExpression<T> Map(IToken source);
+    public abstract IReadPartial<S, T> Map(S source);
 
-    IReadExpression<T> IMap<IToken, IReadExpression<T>>.Map(IToken source, IReadExpression<T> otherwise)
+    public IReadPartial<S, T> Map(S source, IReadPartial<S, T> otherwise)
     {
-      IReadExpression<T> value = otherwise;
+      IReadPartial<S, T> value = otherwise;
       Map(source).Use(r => value = r);
       return value;
     }

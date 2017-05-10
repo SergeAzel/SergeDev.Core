@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SergeDev.Language.Syntax", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SergeDev.Language.Core", "Contracts\SergeDev.Language.Core.csproj", "{FC3383BE-DC73-4FDE-B6FC-16D0FD8B1376}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SergeDev.Language.Match", "SergeDev.Language.Match\SergeDev.Language.Match.csproj", "{CBC1C913-8662-419C-BEEE-0C24F9FE8121}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SergeDev.Language.Framework", "SergeDev.Language.Framework\SergeDev.Language.Framework.csproj", "{C09C59AA-ACCB-4D2B-B00F-8FF9D6A41F2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SergeDev.Language.Test", "SergeDev.Language.Test\SergeDev.Language.Test.csproj", "{F31C5EA0-8567-48D8-A77B-433B8F87B4C3}"
@@ -27,10 +25,6 @@ Global
 		{FC3383BE-DC73-4FDE-B6FC-16D0FD8B1376}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC3383BE-DC73-4FDE-B6FC-16D0FD8B1376}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC3383BE-DC73-4FDE-B6FC-16D0FD8B1376}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBC1C913-8662-419C-BEEE-0C24F9FE8121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBC1C913-8662-419C-BEEE-0C24F9FE8121}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBC1C913-8662-419C-BEEE-0C24F9FE8121}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBC1C913-8662-419C-BEEE-0C24F9FE8121}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C09C59AA-ACCB-4D2B-B00F-8FF9D6A41F2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C09C59AA-ACCB-4D2B-B00F-8FF9D6A41F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C09C59AA-ACCB-4D2B-B00F-8FF9D6A41F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU

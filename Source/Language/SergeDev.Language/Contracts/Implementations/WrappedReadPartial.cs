@@ -8,15 +8,15 @@ using SergeDev.Contracts.Interfaces;
 
 namespace SergeDev.Language.Core.Implementations
 {
-  public class WrappedReadExpression<T, B> : IReadExpression<B> where T : class, B where B : class
+  public class WrappedReadPartial<S, T, B> : IReadPartial<S, B> where T : class, B where B : class
   {
-    private IReadExpression<T> wrapped;
-    public WrappedReadExpression(IReadExpression<T> wrapped)
+    private IReadPartial<S, T> wrapped;
+    public WrappedReadPartial(IReadPartial<S, T> wrapped)
     {
       this.wrapped = wrapped;
     }
 
-    public B Read(IObjectStream<IToken> source)
+    public B Read(IObjectStream<S> source)
     {
       return wrapped.Read(source);
     }
