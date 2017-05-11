@@ -1,5 +1,4 @@
-﻿using SergeDev.Language.Syntax.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,19 +6,29 @@ using System.Threading.Tasks;
 using SergeDev.Contracts.Interfaces;
 using SergeDev.Language.Core.Interfaces;
 using SergeDev.Language.Syntax.Tokens;
+using SergeDev.Language.Core.Implementations;
 
 namespace SergeDev.Language.Syntax.TokenMaps
 {
-  public class StandardTokenMap : ICharacterTokenReaderMap
+  public class StandardTokenMap : BaseReaderMap<char, BaseToken>
   {
-    public IReadPartial<char, BaseToken> Map(char source, IReadPartial<char, BaseToken> otherwise)
+    private List<IReaderMap<char, BaseToken>> subMaps;
+    private IReadPartial<char, BaseToken> otherwise;
+
+    public StandardTokenMap(IEnumerable<IReaderMap<char, BaseToken>> subMaps, IReadPartial<char, BaseToken> otherwise)
     {
-      throw new NotImplementedException();
+      this.subMaps = subMaps.ToList();
+      this.otherwise = otherwise;
     }
 
-    IReadPartial<char, BaseToken> IMap<char, IReadPartial<char, BaseToken>>.Map(char source)
+    public void AddSubMap(IReaderMap<char, BaseToken> map)
     {
-      throw new NotImplementedException();
+      subMaps.Add(map);
+    }
+
+    public override IReadPartial<char, BaseToken> Map(char source)
+    {
+      return null;
     }
   }
 }
