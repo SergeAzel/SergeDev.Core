@@ -45,6 +45,7 @@
     <Compile Include="Interfaces\IFactory.cs" />
     <Compile Include="Interfaces\IMap.cs" />
     <Compile Include="Interfaces\IObjectStream.cs" />
+    <Compile Include="Interfaces\IReadOnlyObjectStream.cs" />
     <Compile Include="Interfaces\IReadOnlyTypeRegistry.cs" />
     <Compile Include="Interfaces\ITypeRegistry.cs" />
     <Compile Include="Interfaces\ITypeDictionary.cs" />

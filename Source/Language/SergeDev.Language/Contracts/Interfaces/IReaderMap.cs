@@ -1,5 +1,5 @@
-﻿using SergeDev.Contracts.Interfaces;
-using SergeDev.Language.Core.Interfaces;
+﻿using SergeDev.Language.Core.Interfaces;
+using SergeDev.Contracts.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SergeDev.Language.Core.Interfaces
 {
-  public interface IReaderMap<S, T> : IMap<S, IReadPartial<S, T>>
+  public interface IReaderMap<S, T> : IMap<IReadOnlyObjectStream<S>, IReadPartial<S, T>>
   {
   }
 }

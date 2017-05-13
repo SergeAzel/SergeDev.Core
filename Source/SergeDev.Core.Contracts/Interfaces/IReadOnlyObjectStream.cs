@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace SergeDev.Contracts.Interfaces
 {
-  public interface IObjectStream<T> : IReadOnlyObjectStream<T>
+  public interface IReadOnlyObjectStream<T>
   {
-    T Take();
+    bool HasObject();
 
-    IEnumerable<T> Take(int count);
+    bool HasObject(int depth);
 
-    void Discard();
+    T Peek();
 
-    void Discard(int count);
+    T Peek(int depth);
   }
 }

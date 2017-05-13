@@ -71,6 +71,19 @@ namespace SergeDev.Core
       }
     }
 
+    public void Discard()
+    {
+      if (peekQueue.Count < 0)
+      {
+        QueueFromSource();
+      }
+      peekQueue.RemoveAt(0);
+    }
+
+    public void Discard(int count)
+    {
+    }
+
     private T TakeUnchecked()
     {
       T result = peekQueue[0];
@@ -89,5 +102,6 @@ namespace SergeDev.Core
       }
       return sourceExhausted;
     }
+
   }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SergeDev.Language.Core.Interfaces;
 using SergeDev.Language.Core.Extension;
+using SergeDev.Contracts.Interfaces;
 
 namespace SergeDev.Language.Core.Implementations
 {
@@ -16,7 +17,7 @@ namespace SergeDev.Language.Core.Implementations
       this.wrapped = wrapped;
     }
 
-    public override IReadPartial<S, B> Map(S source)
+    public override IReadPartial<S, B> Map(IReadOnlyObjectStream<S> source)
     {
       return wrapped.Map(source).Wrap<S, T, B>();
     }

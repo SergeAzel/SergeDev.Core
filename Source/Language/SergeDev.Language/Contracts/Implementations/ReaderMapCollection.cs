@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SergeDev.Language.Core.Extension;
 using SergeDev.Language.Core.Implementations;
+using SergeDev.Contracts.Interfaces;
 
 namespace SergeDev.Language.Core.Implementations
 {
@@ -28,7 +29,7 @@ namespace SergeDev.Language.Core.Implementations
       get { return collection; }
     }
 
-    public override IReadPartial<S, T> Map(S source)
+    public override IReadPartial<S, T> Map(IReadOnlyObjectStream<S> source)
     {
       var result = default(IReadPartial<S, T>);
       foreach (var map in collection)

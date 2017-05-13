@@ -9,6 +9,7 @@ namespace SergeDev.Language.Syntax.Tokens
   public class UnknownToken : BaseToken
   {
     private string value;
+
     public UnknownToken(string value)
     {
       this.value = value;

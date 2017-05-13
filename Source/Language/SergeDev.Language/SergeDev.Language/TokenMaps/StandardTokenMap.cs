@@ -26,7 +26,7 @@ namespace SergeDev.Language.Syntax.TokenMaps
       subMaps.Add(map);
     }
 
-    public override IReadPartial<char, BaseToken> Map(char source)
+    public override IReadPartial<char, BaseToken> Map(IReadOnlyObjectStream<char> source)
     {
       return null;
     }

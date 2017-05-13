@@ -11,9 +11,9 @@ namespace SergeDev.Language.Core.Implementations
 {
   public abstract class BaseReaderMap<S, T> : IReaderMap<S, T> where T : class
   {
-    public abstract IReadPartial<S, T> Map(S source);
+    public abstract IReadPartial<S, T> Map(IReadOnlyObjectStream<S> source);
 
-    public IReadPartial<S, T> Map(S source, IReadPartial<S, T> otherwise)
+    public IReadPartial<S, T> Map(IReadOnlyObjectStream<S> source, IReadPartial<S, T> otherwise)
     {
       IReadPartial<S, T> value = otherwise;
       Map(source).Use(r => value = r);
