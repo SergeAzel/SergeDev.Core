@@ -50,6 +50,8 @@
     <Compile Include="Implementations\BaseReaderMap.cs" />
     <Compile Include="Implementations\EnumerateUntilNull.cs" />
     <Compile Include="Implementations\ReaderMapCollection.cs" />
+    <Compile Include="Implementations\StringTakeWhile.cs" />
+    <Compile Include="Implementations\TakeWhile.cs" />
     <Compile Include="Implementations\WrappedReadPartial.cs" />
     <Compile Include="Implementations\WrappedReaderMap.cs" />
     <Compile Include="Interfaces\IReadPartial.cs" />

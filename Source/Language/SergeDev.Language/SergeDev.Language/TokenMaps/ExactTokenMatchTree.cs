@@ -10,6 +10,9 @@ using SergeDev.Language.Syntax.Tokens;
 
 namespace SergeDev.Language.Syntax.TokenMaps
 {
+  /// <summary>
+  /// Deprecated?
+  /// </summary>
   public class ExactTokenMatchTree : BaseReaderMap<char, BaseToken>
   {
     private Dictionary<char, IReaderMap<char, BaseToken>> children;

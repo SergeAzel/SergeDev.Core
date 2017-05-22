@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace SergeDev.Language.Syntax.TokenMaps
 {
+  /// <summary>
+  /// Deprecated?
+  /// </summary>
+  /// <typeparam name="T"></typeparam>
   public class DeepPeekObjectStream<T> : IReadOnlyObjectStream<T>
   {
     private IReadOnlyObjectStream<T> wrapped;

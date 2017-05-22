@@ -43,7 +43,9 @@
     <Compile Include="BasicFactory.cs" />
     <Compile Include="BasicObjectStream.cs" />
     <Compile Include="BranchedTypeRegistry.cs" />
+    <Compile Include="CachedExpression.cs" />
     <Compile Include="EmptyTypeRegistry.cs" />
+    <Compile Include="Extension\IReadOnlyObjectStream.cs" />
     <Compile Include="Extension\Object.cs" />
     <Compile Include="DelegatedEnumerator.cs" />
     <Compile Include="TypeDictionary.cs" />
