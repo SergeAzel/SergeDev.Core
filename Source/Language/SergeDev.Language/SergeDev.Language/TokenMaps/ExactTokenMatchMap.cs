@@ -13,16 +13,16 @@ using System.Globalization;
 
 namespace SergeDev.Language.Syntax.TokenMaps
 {
-  public class ExactTokenMatchMap : BaseReaderMap<char, BaseToken>
+  public class ExactTokenMatchMap : BaseReaderMap<char, IToken>
   {
-    private Dictionary<string, IReadPartial<char, BaseToken>> matches;
-    private CachedExpression<IEnumerable<KeyValuePair<string, IReadPartial<char, BaseToken>>>> sortedMatches;
-    private IReadPartial<char, BaseToken> otherwise;
+    private Dictionary<string, IReadPartial<char, IToken>> matches;
+    private CachedExpression<IEnumerable<KeyValuePair<string, IReadPartial<char, IToken>>>> sortedMatches;
+    private IReadPartial<char, IToken> otherwise;
 
-    public ExactTokenMatchMap(IReadPartial<char, BaseToken> otherwise = null)
+    public ExactTokenMatchMap(IReadPartial<char, IToken> otherwise = null)
     {
-      matches = new Dictionary<string, IReadPartial<char, BaseToken>>();
-      sortedMatches = new CachedExpression<IEnumerable<KeyValuePair<string, IReadPartial<char, BaseToken>>>>(() =>
+      matches = new Dictionary<string, IReadPartial<char, IToken>>();
+      sortedMatches = new CachedExpression<IEnumerable<KeyValuePair<string, IReadPartial<char, IToken>>>>(() =>
       {
         return matches.AsEnumerable().OrderByDescending(kvp => kvp.Key.Length).ToList();
       });
@@ -35,7 +35,7 @@ namespace SergeDev.Language.Syntax.TokenMaps
       return Add(matchReader.Match, matchReader);
     }
 
-    public bool Add(string match, IReadPartial<char, BaseToken> map)
+    public bool Add(string match, IReadPartial<char, IToken> map)
     {
       if (!matches.ContainsKey(match) && match.Length > 0)
       {
@@ -46,7 +46,7 @@ namespace SergeDev.Language.Syntax.TokenMaps
       return false;
     }
 
-    public override IReadPartial<char, BaseToken> Map(IReadOnlyObjectStream<char> source)
+    public override IReadPartial<char, IToken> Map(IReadOnlyObjectStream<char> source)
     {
       var sortedMatchesResult = sortedMatches.Evaluate();
 

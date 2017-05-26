@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SergeDev.Core
 {
-  public class BasicObjectStream<T> : IObjectStream<T>
+  public class BasicObjectStream<T> : BaseObjectStream<T>
   {
     private IEnumerator<T> source;
     private bool sourceExhausted;
@@ -19,12 +19,7 @@ namespace SergeDev.Core
       this.peekQueue = new List<T>();
     }
 
-    public bool HasObject()
-    {
-      return HasObject(0);
-    }
-
-    public bool HasObject(int depth)
+    public override bool HasObject(int depth)
     {
       if (peekQueue.Count > depth)
       {
@@ -41,17 +36,12 @@ namespace SergeDev.Core
       }
     }
 
-    public T Peek()
-    {
-      return Peek(0);
-    }
-
-    public T Peek(int depth)
+    public override T Peek(int depth)
     {
       return (HasObject(depth) ? peekQueue[depth] : default(T));
     }
 
-    public T Take()
+    public override T Take()
     {
       T result = default(T);
 
@@ -63,7 +53,7 @@ namespace SergeDev.Core
       return result;
     }
 
-    public IEnumerable<T> Take(int count)
+    public override IEnumerable<T> Take(int count)
     {
       while (count-- > 0 && HasObject())
       {
@@ -71,7 +61,7 @@ namespace SergeDev.Core
       }
     }
 
-    public void Discard()
+    public override void Discard()
     {
       if (peekQueue.Count < 0)
         QueueFromSource();
@@ -80,7 +70,7 @@ namespace SergeDev.Core
         peekQueue.RemoveAt(0);
     }
 
-    public void Discard(int count)
+    public override void Discard(int count)
     {
       for (var i = 0; i < count; ++i)
         Discard();

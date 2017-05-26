@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseObjectStream.cs" />
+    <Compile Include="BaseReadOnlyObjectStream.cs" />
     <Compile Include="BasicFactory.cs" />
     <Compile Include="BasicObjectStream.cs" />
     <Compile Include="BranchedTypeRegistry.cs" />

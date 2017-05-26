@@ -20,9 +20,9 @@ namespace SergeDev.Language.Core.Implementations
       this.tokenize = tokenize;
     }
 
-    public T Read(IObjectStream<S> source)
+    public IEnumerable<T> Read(IObjectStream<S> source)
     {
-      return tokenize(Yield(source));
+      yield return tokenize(Yield(source));
     }
 
     private IEnumerable<S> Yield(IObjectStream<S> source)

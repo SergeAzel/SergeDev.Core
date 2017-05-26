@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace SergeDev.Language.Syntax.Tokens
 {
-  public class CommentBeginLineToken : BaseToken
+  public class CommentToken : BasicToken 
   {
-    public const string MatchValue = "//";
-
-    public override string Value
-    {
-      get { return MatchValue; }
-    }
+    public CommentToken(string value) : base(value, false) { }
   }
 }

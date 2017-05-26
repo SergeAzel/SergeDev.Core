@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace SergeDev.Language.Syntax.Tokens
 {
-  public class OpenBracketToken : BaseToken
+  public class OpenBracketToken : IToken
   {
     public const string MatchValue = "}";
 
-    public override string Value
+    public bool Critical
+    {
+      get { return true; }
+    }
+
+    public string Value
     {
       get { return MatchValue; }
     }

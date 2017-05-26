@@ -9,6 +9,6 @@ namespace SergeDev.Language.Core.Interfaces
 {
   public interface IReadPartial<S, T>
   {
-    T Read(IObjectStream<S> source);
+    IEnumerable<T> Read(IObjectStream<S> source);
   }
 }

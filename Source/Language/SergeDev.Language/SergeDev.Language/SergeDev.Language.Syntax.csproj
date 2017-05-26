@@ -61,12 +61,13 @@
     <Compile Include="TokenMaps\BasicExactTokenMatch.cs" />
     <Compile Include="TokenMaps\BaseExactTokenMatch.cs" />
     <Compile Include="TokenMaps\DeepPeekObjectStream.cs" />
+    <Compile Include="TokenMaps\DefaultLanguageTokenMap.cs" />
     <Compile Include="TokenMaps\ExactTokenMatchMap.cs" />
     <Compile Include="TokenMaps\ExactTokenMatchTree.cs" />
-    <Compile Include="TokenMaps\StandardTokenMap.cs" />
-    <Compile Include="Tokens\BaseToken.cs" />
+    <Compile Include="Tokens\BasicToken.cs" />
+    <Compile Include="Tokens\IToken.cs" />
     <Compile Include="Tokens\CloseBracketToken.cs" />
-    <Compile Include="Tokens\CommentBeginLineToken.cs" />
+    <Compile Include="Tokens\CommentToken.cs" />
     <Compile Include="Tokens\EndOfLineToken.cs" />
     <Compile Include="Tokens\NameToken.cs" />
     <Compile Include="Tokens\OpenBracketToken.cs" />

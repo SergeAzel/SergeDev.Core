@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace SergeDev.Language.Syntax.Tokens
 {
-  public abstract class BaseToken
+  public interface IToken
   {
-    public abstract string Value { get; }
+    string Value { get; }
 
-    public virtual bool Critical
-    {
-      get { return true; }
-    }
+    bool Critical { get; }
   }
 }

@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace SergeDev.Language.Syntax.Tokens
 {
-  public class WhitespaceToken : IToken
+  public class BasicToken : IToken
   {
     private string value;
-    public WhitespaceToken(string value)
+    private bool critical;
+    public BasicToken(string value, bool critical)
     {
       this.value = value;
+      this.critical = critical;
+    }
+
+    public bool Critical
+    {
+      get { return critical; }
     }
 
     public string Value
     {
       get { return value; }
-    }
-
-    public bool Critical
-    {
-      get { return false; }
     }
   }
 }

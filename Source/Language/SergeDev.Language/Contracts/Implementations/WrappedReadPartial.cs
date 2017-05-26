@@ -16,7 +16,7 @@ namespace SergeDev.Language.Core.Implementations
       this.wrapped = wrapped;
     }
 
-    public B Read(IObjectStream<S> source)
+    public IEnumerable<B> Read(IObjectStream<S> source)
     {
       return wrapped.Read(source);
     }

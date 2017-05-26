@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SergeDev.Language.Syntax.Tokens
 {
-  public class NameToken : BaseToken
+  public class NameToken : IToken
   {
     private string value;
     public NameToken(string value)
@@ -14,7 +14,12 @@ namespace SergeDev.Language.Syntax.Tokens
       this.value = value;
     }
 
-    public override string Value
+    public bool Critical
+    {
+      get { return true; }
+    }
+
+    public string Value
     {
       get { return value; }
     }

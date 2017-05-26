@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace SergeDev.Language.Syntax.TokenMaps
 {
-  public abstract class BaseExactTokenMatch : IReadPartial<char, BaseToken>
+  public abstract class BaseExactTokenMatch : IReadPartial<char, IToken>
   {
     private string tokenString;
     public BaseExactTokenMatch(string tokenString)
@@ -20,6 +20,6 @@ namespace SergeDev.Language.Syntax.TokenMaps
 
     public string Match { get { return tokenString; } }
 
-    public abstract BaseToken Read(IObjectStream<char> source);
+    public abstract IEnumerable<IToken> Read(IObjectStream<char> source);
   }
 }

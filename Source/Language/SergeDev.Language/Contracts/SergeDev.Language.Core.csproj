@@ -49,7 +49,10 @@
     <Compile Include="Extension\WrapExtension.cs" />
     <Compile Include="Implementations\BaseReaderMap.cs" />
     <Compile Include="Implementations\EnumerateUntilNull.cs" />
+    <Compile Include="Implementations\PreviewObjectStream.cs" />
+    <Compile Include="Implementations\PreviewGreedyReader.cs" />
     <Compile Include="Implementations\ReaderMapCollection.cs" />
+    <Compile Include="Implementations\StartWith.cs" />
     <Compile Include="Implementations\StringTakeWhile.cs" />
     <Compile Include="Implementations\TakeWhile.cs" />
     <Compile Include="Implementations\WrappedReadPartial.cs" />
