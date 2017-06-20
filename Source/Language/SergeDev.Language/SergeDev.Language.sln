@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SergeDev.Language.Framework
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SergeDev.Language.Test", "SergeDev.Language.Test\SergeDev.Language.Test.csproj", "{F31C5EA0-8567-48D8-A77B-433B8F87B4C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SergeDev.Language.Regex", "SergeDev.Language.Regex\SergeDev.Language.Regex.csproj", "{80D1C440-647B-4613-ACAE-C1BEFAA35FCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F31C5EA0-8567-48D8-A77B-433B8F87B4C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F31C5EA0-8567-48D8-A77B-433B8F87B4C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F31C5EA0-8567-48D8-A77B-433B8F87B4C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80D1C440-647B-4613-ACAE-C1BEFAA35FCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D1C440-647B-4613-ACAE-C1BEFAA35FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D1C440-647B-4613-ACAE-C1BEFAA35FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D1C440-647B-4613-ACAE-C1BEFAA35FCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

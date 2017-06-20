@@ -16,5 +16,10 @@ namespace SergeDev.Core.Extension
       }
       return (me != null);
     }
+
+    public static IEnumerable<S> Yield<S>(this S me)
+    {
+      yield return me;
+    }
   }
 }

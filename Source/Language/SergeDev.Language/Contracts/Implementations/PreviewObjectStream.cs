@@ -30,6 +30,16 @@ namespace SergeDev.Language.Core
       get { return taken; }
     }
 
+    /// <summary>
+    /// Finalizes the preview, removing from backing source the quantity taken.
+    /// Calling this is optional.
+    /// </summary>
+    public void Commit()
+    {
+      basis.Discard(taken);
+      taken = 0;
+    }
+
     public override void Discard(int count)
     {
       for (var max = taken + count; taken < max && basis.HasObject(taken); ++taken) ;
